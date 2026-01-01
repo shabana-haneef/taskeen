@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #808000;
+    /* Olive */
+    --color-secondary: #BDB76B;
+    /* Dark Khaki */
+    --color-accent: #556B2F;
+    /* Dark Olive Green */
+
+    --color-bg-dark: #1B2613;
+    /* Deep Olive */
+    --color-bg-mint: #2C3524;
+    /* Muted Dark Olive */
+    --color-bg-peach: #3D4432;
+    --color-bg-dreamy: #F5F7F2;
+    /* Earthy Dark Green */
+
+    --color-text-main: #FAF9F6;
+    /* Off-white for readability */
+    --color-text-soft: #D1D5DB;
+    /* Light Gray */
+
+    --font-sans: 'Lora', serif;
+    --font-serif: 'Playfair Display', serif;
+
+    --animate-fade-in: fadeIn 1.5s ease-out;
+    --animate-slide-up: slideUp 1s ease-out;
+    --animate-bounce-slow: bounce 3s infinite;
+    --animate-slow-zoom: slowZoom 20s infinite alternate;
+    --animate-float: float 6s ease-in-out infinite;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slowZoom {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.1);
+        }
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* Custom Utilities */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-bg-dark text-text-main font-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-serif font-bold;
+}
+
+.classic-bold {
+    @apply font-serif font-black;
+}
